@@ -1,7 +1,8 @@
 'use strict';
 var BlogListController = angular.module('BlogListController', []);
 
-BlogListController.controller('BlogController', function($anchorScroll, $stateParams, $state, BlogService, MetadataService) {
+BlogListController.controller('BlogController', function($anchorScroll, $stateParams, $state, $timeout,BlogService, MetadataService) {
+
     var blogObj = this;
     var apiCallFunction;
 

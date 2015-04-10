@@ -22,7 +22,6 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
     <div id="scrollArea" ng-controller="ScrollCtrl">
       <div ui-view ng-class="well"></div>
 
@@ -129,14 +128,16 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/controller.js"></script>
         <script src="scripts/controllers/blog.js"></script>
         <script src="scripts/controllers/post.js"></script>
         <script src="scripts/services/blogservice.js"></script>
         <script src="scripts/services/metadataservice.js"></script>
-        <script src="scripts/vendor/run-prettify.js"></script>
         <script src="scripts/vendor/smooth-scroll.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/global/equal_height.js"></script>
+
+                <!-- endbuild -->
 </body>
 </html>

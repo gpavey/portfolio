@@ -1,5 +1,8 @@
+'use strict';
 var PostController = angular.module('PostListController', []);
-PostController.controller('PostController', function ( BlogService, MetadataService,$stateParams) {
+PostController.controller('PostController', function ( BlogService, MetadataService,$stateParams,$scope) {
+    $scope.dom = '&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;/html&gt;';
+
     var blogObj = this;
 
     blogObj.post = {};
@@ -12,5 +15,7 @@ PostController.controller('PostController', function ( BlogService, MetadataServ
             description: post.excerpt
         });
     });
+
 });
+
 

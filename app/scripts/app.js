@@ -9,7 +9,8 @@ var portfolioApp = angular.module('portfolioApp', [
   'angulartics',
   'angulartics.google.analytics',
   'SmoothScroll',
-  'ngAnimate'
+  'ngAnimate',
+  'ui.equalHeights'
   ]);
 
 
@@ -109,7 +110,7 @@ portfolioApp.config(function($stateProvider, $urlRouterProvider,$locationProvide
             templateUrl : 'views/post.html',
             controller  : 'PostController',
             controllerAs: 'blogObj'
-        })
+        });
 
     // $locationProvider.html5Mode(true).hashPrefix('!');
 
@@ -131,9 +132,13 @@ portfolioApp.config(function($stateProvider, $urlRouterProvider,$locationProvide
     //     }
     // });
 });
+// $rootScope.$on('$includeContentLoaded', function() {
+//     setTimeout(equalheight(),1000);
+// });
 
 portfolioApp.routeConfig = {
     // global constant config values live here
     ROOT_URL: '%%ROOT_URL%%',
     API_URL: 'http://geoffpavey.com'
 };
+
